@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="glass-container">
+    <div style="display:flex;justify-content:space-between;align-items:center;">
+      <span id="welcomeUser"></span>
+      <button class="logout-btn" id="logoutBtn">Logout</button>
+    </div>
+    <h2>To-Do List</h2>
+    <div class="task-input">
+      <input type="text" id="taskInput" placeholder="Enter a task...">
+      <button onclick="addTask()">Add Task</button>
+    </div>
+    <div class="task-filters">
+      <button onclick="filterTasks('all',this)" id="allCount" class="active">All</button>
+      <button onclick="filterTasks('active',this)" id="activeCount">Active</button>
+      <button onclick="filterTasks('completed',this)" id="completedCount">Completed</button>
+    </div>
+    <ul class="task-list" id="taskList"></ul>
+    <div style="display:flex;justify-content:space-between;">
+      <div>Total: <span id="totalTasks">0</span></div>
+      <div>Active: <span id="activeTasks">0</span></div>
+      <div>Completed: <span id="completedTasks">0</span></div>
+    </div>
+  </div>
+  <script src="src/script.js"></script>
+</body>
+</html>

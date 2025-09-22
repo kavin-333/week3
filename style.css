@@ -1,0 +1,122 @@
+/* Background */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: url('images/bg1.jpg') no-repeat center center/cover;
+}
+/* Glass container */
+.glass-container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 30px;
+  width: 350px;
+  max-width: 90%;
+  text-align: center;
+  color: purple;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+.glass-container h2 { margin-bottom: 20px; }
+
+.glass-container p a { color: lightcoral; }
+
+/* Inputs */
+input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+}
+
+/* Buttons */
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  background: purple;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+button:hover { background: grey; }
+
+.logout-btn { background: lightpink; }
+.logout-btn:hover { background: grey; }
+
+/* Task Input */
+.task-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.task-input input {
+  flex: 1;
+  margin-right: 8px;
+}
+
+/* Task Filters */
+.task-filters {
+  margin: 10px 0;
+}
+.task-filters button.active { background: lightpink; }
+
+/* Task List */
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+  max-height: 300px;
+  overflow-y: auto;
+  text-align: left;
+}
+.task-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 6px 0;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.task-list li.completed span {
+  text-decoration: line-through;
+  color: #ccc;
+}
+.task-list li input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #4CAF50;
+  margin-right: 10px;
+}
+.task-list li span {
+  flex: 1;
+  cursor: pointer;
+}
+/* Delete Button */
+.task-list li button {
+  background: transparent;
+  color: #ff6666;
+  font-size: 18px;
+}
+.task-list li button:hover { color: red; }
+
+/* Empty Message */
+.empty-msg {
+  text-align: center;
+  color: #ddd;
+  font-style: italic;
+}
+@media (max-width: 480px) {
+  .glass-container { width: 95%; padding: 20px; }
+}
